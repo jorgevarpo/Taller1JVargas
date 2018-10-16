@@ -10,6 +10,11 @@ namespace Taller1JVargas
     {
         Base basesita = new Base();
 
+        /// <summary>
+        /// Este metodo verifica si el usuario ingresado esta en la lista
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public bool Check(string name) {
             bool data = false;
             foreach (User x in Base.DataBase)
@@ -20,6 +25,11 @@ namespace Taller1JVargas
         }
 
         public bool Editor(string name)
+        /// <summary>
+        /// Este metodo devolvera el valor del booleano editor
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         {
             bool data = false;
             foreach (User x in Base.DataBase)
@@ -30,6 +40,12 @@ namespace Taller1JVargas
         }
 
         public void AddPost(string autor) {
+            /// <summary>
+            /// Este metodo creara un objeto de tipo POST con la publicacion y lo agregara en la lista de publicaciones
+            /// ademas verificara si la publicacion contiene algo para evitar publicaciones vacias
+            /// </summary>
+            /// <param name="name"></param>
+            /// <returns></returns>
             Console.WriteLine("Ingrese el contenido de la Publicacion");
             string content = null;
             while(content == null)
@@ -45,6 +61,12 @@ namespace Taller1JVargas
         }
 
         public string ShowPublish() {
+            /// <summary>
+            /// Este metodo Creara un String con todas las publicaciones para ser mostradas en pantalla
+            /// si no hubieran mostrara la advertencia
+            /// </summary>
+            /// <param name="name"></param>
+            /// <returns></returns>
             StringBuilder sb = new StringBuilder();
             if (Base.Publish.Count > 0)
             {
@@ -61,6 +83,11 @@ namespace Taller1JVargas
         }
 
         public bool Check(int id) {
+            /// <summary>
+            /// Este metodo verifica si existe una publicacion, con un numero dado
+            /// </summary>
+            /// <param name="name"></param>
+            /// <returns></returns>
             bool a = false;
             foreach (Post x in Base.Publish)
             {
@@ -71,6 +98,11 @@ namespace Taller1JVargas
 
         public void AddComment(string autor)
         {
+            /// <summary>
+            /// Este metodo agregara el comentario a la publicacion, si no la encuentra o no existe mostrara la advertencia
+            /// </summary>
+            /// <param name="name"></param>
+            /// <returns></returns>
             Console.WriteLine("Ingrese el numero de Publicacion");
             int op = int.Parse(Console.ReadLine());
             if (Check(op))
@@ -88,7 +120,11 @@ namespace Taller1JVargas
         }
 
         public bool Input(String message)
-        {
+        {/// <summary>
+        /// Este metodo servira para validar que el usuario ingrese unicamente 1 o 2 en la seleccion para moverse dentro de la aplicacion 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
             Console.WriteLine(message);
             int opc = 0 ;
             while (opc < 1)

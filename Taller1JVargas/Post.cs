@@ -8,6 +8,7 @@ namespace Taller1JVargas
 {
     class Post
     {
+        
         public Post(string autor, string content) {
             Base.Id += 1;
             Autor = autor;

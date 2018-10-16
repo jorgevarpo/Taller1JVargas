@@ -16,9 +16,9 @@ namespace Taller1JVargas
         public String Info() {
             StringBuilder sb = new StringBuilder();
             sb.Append("         -------------------------------------"+Environment.NewLine);
-            sb.Append("         |Fecha:" + Date + Environment.NewLine);
-            sb.Append("         |" + Content+Environment.NewLine);
-            sb.Append("         |Por: " + Autor);
+            sb.Append("         Fecha:" + Date + Environment.NewLine);
+            sb.Append("         " + Content+Environment.NewLine);
+            sb.Append("         Por: " + Autor);
             sb.Append( Environment.NewLine);
             return sb.ToString();
         }

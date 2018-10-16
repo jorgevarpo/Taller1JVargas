@@ -8,13 +8,17 @@ namespace Taller1JVargas
 {
     class Base
     {
+        /// <summary>
+        /// En esta clase estaran las listas que almacenan los usuarios y las publicaciones
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public Base() {
             Fill();
         }
 
         public static int Id = 0;
-
-         public static List<User> DataBase = new List<User>();
+        public static List<User> DataBase = new List<User>();
         public static List<Post> Publish = new List<Post>();
 
         public void Fill() {

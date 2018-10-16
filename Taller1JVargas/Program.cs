@@ -13,6 +13,7 @@ namespace Taller1JVargas
            
             while(Menu());
             Console.WriteLine("Adios");
+            Console.ReadKey();
         }
 
         public static bool Menu()
@@ -36,7 +37,7 @@ namespace Taller1JVargas
                 Console.WriteLine("Usuario no encontrado");
             }
 
-            return util.Input("Cambiar de Usuario?\n1-Si 2-No");
+            return util.Input("Cambiar de Usuario?\n1-Si 2-No ");
         }
 
         public static bool MenuEditor(string id, Utils util)
